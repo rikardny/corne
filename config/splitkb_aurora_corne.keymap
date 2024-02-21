@@ -1,6 +1,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define FSLASH  LS(N7)
+#define PIPE    RA(NON_US_BACKSLASH)
+#define BSLASH  RA(MINUS)
+
 / {
     behaviors {
         hmr: hmr {
@@ -41,10 +45,10 @@
             //                    | BKS | LWR | SPC |   | ENT | RSE  | DEL |
 
             bindings = <
-&kp TAB            &kp Q            &kp W        &kp F          &kp P         &kp B        &kp J    &kp L         &kp U          &kp Y        &kp SEMI          &kp RBKT
-&hml LEFT_GUI ESC  &hml LEFT_GUI A  &hml LALT R  &hml LSHIFT S  &hml LCTRL T  &kp G        &kp M    &hmr RCTRL N  &hmr RSHIFT E  &hmr RALT I  &hmr RIGHT_GUI O  &kp NUHS
-&kp LSHFT          &kp Z            &kp X        &kp C          &kp D         &kp V        &kp K    &kp H         &kp COMMA      &kp PERIOD   &kp FSLH          &kp RSHIFT
-                                                 &kp BACKSPACE  &mo 1         &kp SPACE    &kp RET  &mo 2         &kp DELETE
+&kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B       &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &kp RBKT
+&hml LGUI ESC   &hml LGUI A     &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &kp G       &kp M       &hmr RCTRL N    &hmr RSHIFT E   &hmr RALT I     &hmr RGUI O     &kp NUHS
+&kp LSHFT       &kp Z           &kp X           &kp C           &kp D           &kp V       &kp K       &kp H           &kp COMMA       &kp PERIOD      &kp FSLH        &kp RSHIFT
+                                                &kp BACKSPACE   &mo 1           &kp SPACE   &kp RET     &mo 2           &kp DELETE
             >;
         };
 
@@ -58,7 +62,7 @@
             bindings = <
 &trans  &kp N1                &kp N2                    &kp N3         &kp N4        &kp N5       &kp N6     &kp N7     &kp N8      &kp N9      &kp N0               &kp RA(RBKT)
 &trans  &kp NON_US_BACKSLASH  &kp RA(N8)                &kp RA(N7)     &kp ASTERISK  &kp CARET    &kp RPAR   &kp LPAR   &kp RA(N0)  &kp RA(N9)  &kp LS(NON_US_BSLH)  &kp LS(N2)
-&trans  &kp LS(N7)            &kp RA(NON_US_BACKSLASH)  &kp RA(MINUS)  &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp LBKT    &kp SQT     &kp SPACE            &kp SPACE
+&trans  &kp FSLASH            &kp PIPE  &kp BSLASH      &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp LBKT    &kp SQT     &kp SPACE            &kp SPACE
                                                         &trans         &trans        &trans       &trans     &trans     &trans
             >;
         };
