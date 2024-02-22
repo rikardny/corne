@@ -5,6 +5,17 @@
 #define PIPE    RA(NON_US_BACKSLASH)
 #define BSLASH  RA(MINUS)
 
+#define lessth  NON_US_BACKSLASH
+#define lbrack  RA(N8)
+#define lbrace  ASTERISK
+#define lparen  CARET
+#define ampers  RPAR
+#define equals  LPAR
+#define rparen  RA(N0)
+#define rbrack  RA(N9)
+#define rbrace  LS(NON_US_BSLH)
+#define greath  LS(N2)
+
 / {
     behaviors {
         hmr: hmr {
@@ -60,10 +71,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1                &kp N2                    &kp N3         &kp N4        &kp N5       &kp N6     &kp N7     &kp N8      &kp N9      &kp N0               &kp RA(RBKT)
-&trans  &kp NON_US_BACKSLASH  &kp RA(N8)                &kp RA(N7)     &kp ASTERISK  &kp CARET    &kp RPAR   &kp LPAR   &kp RA(N0)  &kp RA(N9)  &kp LS(NON_US_BSLH)  &kp LS(N2)
-&trans  &kp FSLASH            &kp PIPE  &kp BSLASH      &kp SPACE     &kp SPACE    &kp SPACE  &kp SPACE  &kp LBKT    &kp SQT     &kp SPACE            &kp SPACE
-                                                        &trans         &trans        &trans       &trans     &trans     &trans
+&kp N0  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp RA(RBKT)
+&trans  &kp lessth  &kp lbrack  &kp lbrace  &kp lparen  &kp ampers  &kp equals  &kp rparen  &kp rbrack  &kp rbrace  &kp greath  &kp trans
+&trans  &kp FSLASH  &kp PIPE    &kp BSLASH  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                                &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
