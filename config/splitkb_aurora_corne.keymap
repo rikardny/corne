@@ -84,7 +84,7 @@
         bindings = <
 &trans &trans &trans &trans &trans &trans    &kp DOWN &kp RIGHT  &trans &trans &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp UP   &kp up  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp UP   &kp LEFT  &trans  &trans  &trans   &trans
                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
