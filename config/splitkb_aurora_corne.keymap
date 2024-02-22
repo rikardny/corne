@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define FSLASH  LS(N7)
-#define PIPE    RA(NON_US_BACKSLASH)
+#define RPIPE   RA(NON_US_BACKSLASH)
 #define BSLASH  RA(MINUS)
 
 #define LESSTH  NON_US_BACKSLASH
@@ -16,7 +16,7 @@
 #define RBRACE  RA(N9)
 #define GREATH  LS(NON_US_BSLH)
 
-#define TILDE   RA(RBKT)
+#define RTILDE  RA(RBKT)
 
 / {
     behaviors {
@@ -73,16 +73,16 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp N0  &kp N1      &kp N3      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp TILDE
+&kp N0  &kp N1      &kp N3      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp RA(RBKT)
 &trans  &kp LESSTH  &kp LBRACK  &kp LBRACE  &kp LPAREN  &kp AMPERS  &kp EQUALS  &kp RPAREN  &kp RBRACK  &kp RBRACE  &kp GREATH  &trans
-&trans  &kp FSLASH  &kp PIPE    &kp BSLASH  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &kp FSLASH  &kp RPIPE   &kp BSLASH  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
                                 &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
         raise_layer {
         bindings = <
-&kp F12 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp DOWN &kp RIGHT  &kp F8  &kp F9  &kp F10  &kp F11
+&trans &trans &trans &trans &trans &trans    &kp DOWN &kp RIGHT  &trans &trans &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp UP   &trans  &trans  &trans  &trans   &trans
                          &trans  &trans  &trans    &trans  &trans  &trans
