@@ -14,7 +14,7 @@
 #define RPAREN  LPAR
 #define RBRACK  RA(N0)
 #define RBRACE  RA(N9)
-#define GREATH  LS(NON_US_BSLH)
+#define GRTHAN  LS(NON_US_BSLH)
 
 #define RTILDE  RA(RBKT)
 
@@ -61,7 +61,7 @@
             // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  :  |  -  |     |
             //                    | BKS | LWR | SPC |   | ENT | RSE  | DEL |
             bindings = <
-&kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B       &kp J       &kp L           &kp U           &kp Y           &kp SEMI        &kp RBKT
+&kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B       &kp J       &kp L           &kp U           &kp Y           &kp MINUS       &kp RBKT
 &hml LGUI ESC   &hml LGUI A     &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &kp G       &kp M       &hmr RCTRL N    &hmr RSHIFT E   &hmr RALT I     &hmr RGUI O     &kp NUHS
 &kp LSHFT       &kp Z           &kp X           &kp C           &kp D           &kp V       &kp K       &kp H           &kp COMMA       &kp PERIOD      &kp FSLH        &kp RSHIFT
                                                 &kp BACKSPACE   &mo 1           &kp SPACE   &kp RET     &mo 2           &kp DELETE
@@ -76,7 +76,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
 &kp N0      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp RTILDE
-&trans      &kp LESSTH  &kp LBRACK  &kp LBRACE  &kp LPAREN  &kp AMPERS  &kp EQUALS  &kp RPAREN  &kp RBRACK  &kp RBRACE  &kp GREATH  &trans
+&trans      &kp LESSTH  &kp LBRACK  &kp LBRACE  &kp LPAREN  &kp AMPERS  &kp EQUALS  &kp RPAREN  &kp RBRACK  &kp RBRACE  &kp GRTHAN  &kp LS(N2)
 &trans      &kp FSLASH  &kp PIPE    &kp BSLASH  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
                                     &trans      &trans      &trans      &trans      &trans      &trans
             >;
