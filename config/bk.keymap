@@ -2,19 +2,21 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define FSLASH  LS(N7)
-#define PIPE    RA(NON_US_BACKSLASH)
+#define RPIPE   RA(NON_US_BACKSLASH)
 #define BSLASH  RA(MINUS)
 
 #define LESSTH  NON_US_BACKSLASH
 #define LBRACK  RA(N8)
-#define LBRACE  ASTERISK
-#define LPAREN  CARET
-#define AMPERS  RPAR
-#define EQUALS  LPAR
-#define RPAREN  RA(N0)
-#define RBRACK  RA(N9)
-#define RBRACE  LS(NON_US_BSLH)
-#define GREATH  LS(N2)
+#define LBRACE  RA(N7) 
+#define LPAREN  ASTERIS
+#define AMPERS  CARET
+#define EQUALS  RPAR
+#define RPAREN  LPAR
+#define RBRACK  RA(N0)
+#define RBRACE  RA(N9)
+#define GREATH  LS(NON_US_BSLH)
+
+#define RTILDE  RA(RBKT)
 
 / {
     behaviors {
