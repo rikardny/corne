@@ -19,6 +19,8 @@
 #define AO      LEFT_BRACKET
 #define AE      SQT
 #define OE      SEMICOLON
+#define AT      RA(N2)
+#define DOLLAR  RA(N4)
 
 / {
     behaviors {
@@ -72,21 +74,21 @@
             // |  0  |  1  |  2  |  3  |  4  |  5  |         |  6  |  7  |  8  |  9  |  0  |  ~  |
             // |     |  <  |  [  |  {  |  (  |  &  |         |  =  |  )  |  }  |  ]  |  >  |  "  |
             // |     |  /  |  |  |  \  |     |     |         |     |     |     |     |     |     |
-            //                    |     |     |     |         |     |     |     |
+            //                   |     |     |     |         |     |     |     |
 
             bindings = <
-&kp N0  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp RTILDE
-&trans  &kp LESSTH  &kp LBRACK  &kp LBRACE  &kp LPAREN  &kp AMPERS    &kp EQUALS  &kp RPAREN  &kp RBRACK  &kp RBRACE  &kp GRTHAN  &kp LS(N2)
-&trans  &kp FSLASH  &kp RPIPE   &kp BSLASH  &trans      &trans        &trans      &trans      &trans      &trans      &trans      &trans
-                                &trans      &trans      &trans        &trans      &trans      &trans
+&kp N0  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp RTILDE
+&trans  &kp LESSTH  &kp LBRACK  &kp LBRACE  &kp LPAREN  &kp AMPERS  &kp EQUALS  &kp RPAREN  &kp RBRACK  &kp RBRACE  &kp GRTHAN  &kp LS(N2)
+&trans  &kp FSLASH  &kp RPIPE   &kp BSLASH  &kp AT      &kp DOLLAR  &trans      &trans      &trans      &trans      &trans      &trans
+                                &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
+            // |     |  <  | PSE |  >  |PSCRN|     |         |  v  |  >  |  Å  |  Ä  |  Ö  |     |
             // |     |     |     |     |     |     |         |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |         |     |     |     |     |     |     |
-            // |     |     |     |     |     |     |         |     |     |     |     |     |     |
+            // |     |  v  |  M  |  ^  |     |     |         |  ^  |  <  |     |     |     |     |
             //                   |     |     |     |         |     |     |     |
 
             bindings = <
@@ -98,6 +100,11 @@
         };
 
         tri_layer {
+            // -----------------------------------------------------------------------------------------
+            // | F12 | F01 | F02 | F03 | F04 | F05 |         | F06 | F07  | F08 | F09 | F10 | F11 |
+            // |     |     |     |     |     |     |         |     |      |     |     |     |     |
+            // | BTC | BT0 | BT1 | BT2 | BT3 | BT4 |         |     |      |     |     |     |     |
+            //                   |     |     |     |         |     |      |     |
             bindings = <
 &kp F12     &kp F1          &kp F2          &kp F3          &kp F4          &kp F5          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
 &trans      &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(N3))  &kp LS(LG(N4))  &kp LS(LG(N5))  &kp LS(LG(N6))  &kp LS(LG(N7))  &kp LS(LG(N8))  &kp LS(LG(N9))  &kp LS(LG(N0))  &trans
