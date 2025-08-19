@@ -62,7 +62,7 @@
             //                   | BKS | LWR | SPC |         | ENT | RSE  | DEL |
 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp F          &kp P         &kp B        &kp J    &kp L         &kp U          &kp Y        &kp MINUS    &kp EQUAL
+&kp TAB        &kp Q        &kp W        &kp F          &kp P         &kp B        &kp J    &kp L         &kp U          &kp Y        &kp MINUS    &kp RBKT
 &hml LGUI ESC  &hml LGUI A  &hml LALT R  &hml LSHIFT S  &hml LCTRL T  &kp G        &kp M    &hmr RCTRL N  &hmr RSHIFT E  &hmr LALT I  &hmr RGUI O  &kp NUHS
 &kp LC(B)      &kp Z        &kp X        &kp C          &kp D         &kp V        &kp K    &kp H         &kp COMMA      &kp PERIOD   &kp FSLH     &kp RC(W)
                                          &kp BACKSPACE  &mo 1         &kp SPACE    &kp RET  &mo 2         &kp DELETE
